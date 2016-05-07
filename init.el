@@ -79,6 +79,11 @@
 (setq recentf-max-saved-items 500
       recentf-exclude         '("/TAGS$" "/var/tmp/"))
 
+;;; Files > Auto Insert
+(auto-insert-mode)
+(setq auto-insert-directory "~/auto-insert/")
+(define-auto-insert "\\.html?$" "html-template.html")
+
 ;;; Programming > Tools > Which Func
 (which-function-mode 1)
 
@@ -168,6 +173,7 @@
 (el-get-bundle flycheck)
 (el-get-bundle key-chord)
 (el-get-bundle migemo)
+(el-get-bundle emmet-mode)
 
 ;;; git
 (el-get-bundle magit)
