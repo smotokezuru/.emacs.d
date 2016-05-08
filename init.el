@@ -81,8 +81,14 @@
 
 ;;; Files > Auto Insert
 (auto-insert-mode)
-(setq auto-insert-directory "~/auto-insert/")
+(setq auto-insert-directory "~/.emacs.d/auto-insert/")
 (define-auto-insert "\\.html?$" "html-template.html")
+(define-auto-insert ".eslintrc$" "eslintrc-template.json")
+
+;;; Files > Uniquify
+;;; 同名ファイルを区別する
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;;; Programming > Tools > Which Func
 (which-function-mode 1)
@@ -169,22 +175,21 @@
 (el-get-bundle auto-complete)
 (el-get-bundle color-moccur)
 (el-get-bundle ddskk)
-(el-get-bundle diminish)
 (el-get-bundle flycheck)
 (el-get-bundle key-chord)
 (el-get-bundle migemo)
 (el-get-bundle emmet-mode)
-
-;;; git
 (el-get-bundle magit)
 (el-get-bundle git-gutter)
-
 (el-get-bundle helm)
 (el-get-bundle quickrun)
+(el-get-bundle rainbow-mode)
 (el-get-bundle rainbow-delimiters)
 (el-get-bundle undo-tree)
 (el-get-bundle web-mode)
 (el-get-bundle yasnippet)
+
+(el-get-bundle diminish)
 ;(el-get-bundle smart-cursor-color)
 ;(smart-cursor-color-mode 1)
 
